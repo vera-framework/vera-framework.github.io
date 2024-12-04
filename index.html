@@ -158,25 +158,62 @@
     </div>
 
 
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Inference in VERA</h2>
-          <div class="content has-text-justified">
-            <p>
-              Given a set of learned guiding questions, VERA yields fine-grained anomaly scores for each frame in a test video via a coarse-to-fine process shown in the figure below. Step 1 is to ask the VLM to provide an initial anomaly score for each segment. Step 2 is to utilize the scene context and compute an ensemble score for each segment after considering its similar scenes. Step 3 is to generate a frame-level anomaly score for each frame by fusing temporal context with segment-level Gaussian smoothing and frame-level position weighting.   
-            </p>
-            <div class="content has-text-centered">
-              <img src="static/images/fig3.png" alt="VERA Training" class="center" style="width: 50%; height: auto;">
-              <p> After finding the optimal guiding questions, VERA computes anomaly scores in three steps. </p>
+<div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+        <h2 class="title is-3">Qualitative Results</h2>
+        <div class="content has-text-justified">
+            <!-- GIFs in a 2x3 grid -->
+            <div class="gif-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+                <!-- GIF 1 -->
+                <div class="gif-item">
+                    <img src="static/images/scene_1.gif" alt="Scene 1" style="width: 100%; max-width: 300px; height: auto; border-radius: 8px;">
+                    <p>Scene 1</p>
+                </div>
+
+                <!-- GIF 2 -->
+                <div class="gif-item">
+                    <img src="static/images/scene_2.gif" alt="Scene 2" style="width: 100%; max-width: 300px; height: auto; border-radius: 8px;">
+                    <p>Scene 2</p>
+                </div>
+
+                <!-- GIF 3 -->
+                <div class="gif-item">
+                    <img src="static/images/scene_3.gif" alt="Scene 3" style="width: 100%; max-width: 300px; height: auto; border-radius: 8px;">
+                    <p>Scene 3</p>
+                </div>
+
+                <!-- GIF 4 -->
+                <div class="gif-item">
+                    <img src="static/images/scene_4.gif" alt="Scene 4" style="width: 100%; max-width: 300px; height: auto; border-radius: 8px;">
+                    <p>Scene 4</p>
+                </div>
+
+                <!-- GIF 5 -->
+                <div class="gif-item">
+                    <img src="static/images/scene_5.gif" alt="Scene 5" style="width: 100%; max-width: 300px; height: auto; border-radius: 8px;">
+                    <p>Scene 5</p>
+                </div>
+
+                <!-- GIF 6 -->
+                <div class="gif-item">
+                    <img src="static/images/scene_6.gif" alt="Scene 6" style="width: 100%; max-width: 300px; height: auto; border-radius: 8px;">
+                    <p>Scene 6</p>
+                </div>
             </div>
-            <p>
-            When using the learner template embedded with the learned guiding questions to compute the anomaly score, we ask the VLM to ``provide an explanation in one sentence'' when reasoning, and VLM will explain the anomaly score it assigns afterward based on $\mathbf{Q}^{*}$. The instruction-following property of VLMs help us attain explainable VAD prediction.
-            </p>
+        </div>
+    </div>
+</div>
+
+
+    <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Qualitative Results</h2>
+          <div class="content has-text-justified">
+
           </div>
         </div>
       </div>
     </div>
-  
 
 
 <!--BibTex citation -->
