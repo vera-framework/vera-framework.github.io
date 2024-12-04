@@ -179,7 +179,7 @@
           </ul>
 
           <p>
-            
+            we select 6 representative scenes in the this video and show the corresponding explanation provided by the frozen VLM as follows. The main anomaly in this video is a traffic accident where a truck crashes into a train from Frame 2160 to Frame 2299, which corresponds to the 5th scene below. In particular, the learned question ``Is there any visible damage or unusual movement in the video that indicates an anomaly?'' makes the frozen VLM find a good way to express what it sees in the 5th scene and understand this is an anomaly because the crash is unusual and dangerous. The other scenes are also well explained by the frozen VLM under the learned guiding questions. Thus, this verifies that the learned guiding questions can successfully trigger reasonable explanations in the adopted frozen VLM for VAD.
           </p> 
             <!-- GIFs in a 2x3 grid -->
             <div class="gif-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
