@@ -136,6 +136,8 @@
 
 
 </div>
+
+  
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Training in VERA</h2>
@@ -156,6 +158,25 @@
     </div>
 
 
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Inference in VERA</h2>
+          <div class="content has-text-justified">
+            <p>
+              Given a set of learned guiding questions, VERA yields fine-grained anomaly scores for each frame in a test video via a coarse-to-fine process shown in the figure below. Step 1 is to ask the VLM to provide an initial anomaly score for each segment. Step 2 is to utilize the scene context and compute an ensemble score for each segment after considering its similar scenes. Step 3 is to generate a frame-level anomaly score for each frame by fusing temporal context with segment-level Gaussian smoothing and frame-level position weighting.   
+            </p>
+            <div class="content has-text-centered">
+              <img src="static/images/fig3.png" alt="VERA Training" class="center" style="width: 100%; height: auto;">
+              <p> After finding the optimal guiding questions, VERA computes anomaly scores in three steps. </p>
+            </div>
+            <p>
+            When using the learner template embedded with the learned guiding questions to compute the anomaly score, we ask the VLM to ``provide an explanation in one sentence'' when reasoning, and VLM will explain the anomaly score it assigns afterward based on $\mathbf{Q}^{*}$. The instruction-following property of VLMs help us attain explainable VAD prediction.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
 
 
 <!--BibTex citation -->
