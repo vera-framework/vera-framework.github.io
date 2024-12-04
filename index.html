@@ -135,7 +135,25 @@
 <!-- End paper abstract -->
 
 
-
+</div>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Training in VERA</h2>
+          <div class="content has-text-justified">
+            <p>
+              VERA aims to learn guiding questions that break down a complex and ambiguous concept (\ie, what is an ``anomaly'') into a set of identifiable anomalous patterns to unlock reasoning capabilities within frozen VLMs for VAD. Since those patterns vary among datasets, using manually designed descriptions is ineffective for generalization. The key idea of VERA is using a general verbalized learning framework shown in the figure below to generate the desired guiding questions automatically.
+            </p>
+            <div class="content has-text-centered">
+              <img src="static/images/fig2.png" alt="VERA Training" class="center" style="width: 40%; height: auto;">
+              <p> VERA regards the guiding questions for VAD as learnable parameters and optimizes them by the feedback from the optimizer based on the performance of the learner in the learning task. </p>
+            </div>
+            <p>
+            As shown in the figure above, VERA inherits the idea of verbalized machine learning in training:  optimizing language-based parameters by the iterative verbal communication between a learner agent and an optimizer agent, rather than by numerical optimization algorithms. The learner will first make predictions on a batch of training data (sampled video frames and coarsely labeled annotations), and the optimizer will judge the performance of the learner in the designed binary classification task and provide feedback on the choice of guiding questions. They are modeled by the same VLMs in training with different instructions detailed in the template.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 
